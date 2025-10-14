@@ -97,3 +97,13 @@ It helps investors instantly evaluate the **safety and trustworthiness** of smar
 ---
 
 ✅ **Status:** Phase 1 complete and ready for submission.
+
+
+## 🧱 Development Phases
+
+| Phase | Description | Status | Link |
+|-------|--------------|--------|------|
+| 1️⃣ Validate | Problem definition & research | ✅ Complete | [PHASE 1](./docs/PHASE_1_VALIDATE.md) |
+| 2️⃣ Build | Design & Prototype | 🟡 In Progress | [PHASE 2](./docs/PHASE_2_BUILD.md) |
+| 3️⃣ Pitch | Demo & Final Presentation | 🔜 Next | Coming soon |
+
