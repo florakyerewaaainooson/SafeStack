@@ -50,13 +50,12 @@ A Flowchart Diagram Depicting The SafeStack System
 
 ---
 
----
+cat > README.md <<'EOF'
+# SafeStack — Phase 2 Prototype
 
-## 🚀 Phase 2 — Prototype Update
+This prototype accepts a contract address or pasted contract code and returns a mock safety score, findings, and a plain-language explanation.
 
-### SafeStack — Phase 2 Prototype
+Run locally: see docs/PHASE_2_BUILD.md
+EOF
 
-This prototype accepts a contract address or pasted contract code and returns a mock safety score, findings, and plain-language explanation.
-
-Run locally: see instructions in [docs/PHASE_2_BUILD.md](./docs/PHASE_2_BUILD.md)
 
