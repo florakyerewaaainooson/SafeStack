@@ -1,2 +1,4 @@
+cat > requirements/requirements.txt <<'EOF'
 flask
 requests
+EOF
