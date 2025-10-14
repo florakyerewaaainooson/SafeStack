@@ -47,3 +47,16 @@ By combining **AI analysis** and **blockchain transparency**, SafeStack makes de
 A Flowchart Diagram Depicting The SafeStack System
 
 ![SafeStack System Flowchart](./assets/A_flowchart_diagram_depicts_the_SafeStack_system_a.png)
+
+---
+
+---
+
+## 🚀 Phase 2 — Prototype Update
+
+### SafeStack — Phase 2 Prototype
+
+This prototype accepts a contract address or pasted contract code and returns a mock safety score, findings, and plain-language explanation.
+
+Run locally: see instructions in [docs/PHASE_2_BUILD.md](./docs/PHASE_2_BUILD.md)
+
