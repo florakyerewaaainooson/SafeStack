@@ -42,3 +42,7 @@ By combining **AI analysis** and **blockchain transparency**, SafeStack makes de
 | 2️⃣ Build | Design & Prototype | 🟡 In Progress | [PHASE 2](./docs/PHASE_2_BUILD.md) |
 | 3️⃣ Pitch | Demo & Final Presentation | 🔜 Next | Coming soon |
 
+---
+
+![SafeStack System Flowchart](./assets/A_flowchart_diagram_depicts_the_SafeStack_system_a.png)
+
