@@ -96,7 +96,7 @@ It helps investors instantly evaluate the **safety and trustworthiness** of smar
 
 ---
 
-✅ **Status:** Phase 1 complete and ready for submission.
+✅ **Status:** Phase 1 complete.
 
 ---
 
