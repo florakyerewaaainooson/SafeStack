@@ -44,4 +44,6 @@ By combining **AI analysis** and **blockchain transparency**, SafeStack makes de
 
 ---
 
+A Flowchart Diagram Depicting The SafeStack System
+
 ![SafeStack System Flowchart](./assets/A_flowchart_diagram_depicts_the_SafeStack_system_a.png)
