@@ -1,3 +1,4 @@
+from flask import Flask, render_template, request, jsonify
 from flask import Flask, request, jsonify
 from stacks_connector import fetch_contract_code
 from analyzer import analyze_code
@@ -11,35 +12,8 @@ app = Flask(__name__)
 # ---------------------------
 @app.route("/")
 def home():
-    return """
-    <html>
-        <head>
-            <title>SafeStack</title>
-            <style>
-                body {
-                    font-family: 'Segoe UI', sans-serif;
-                    background: #0d1117;
-                    color: #f0f6fc;
-                    text-align: center;
-                    padding-top: 100px;
-                }
-                h1 {
-                    font-size: 2.5em;
-                    color: #58a6ff;
-                }
-                p {
-                    font-size: 1.2em;
-                    color: #8b949e;
-                }
-            </style>
-        </head>
-        <body>
-            <h1>✅ SafeStack is Live</h1>
-            <p>Your AI-powered Bitcoin Security Analyzer is running smoothly.</p>
-            <p>Use the <b>POST /analyze</b> endpoint to test your smart contract security.</p>
-        </body>
-    </html>
-    """
+    return render_template("index.html")
+
 
 
 # ---------------------------
