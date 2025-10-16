@@ -5,22 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SafeStack Analyzer</title>
   <style>
-    body { font-family: Arial; background: #f8f9fa; margin: 50px; }
-    h1 { color: #1f4b99; }
-    input, textarea, button {
-      width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d1117;
+      color: #f0f6fc;
+      margin: 50px;
     }
-    button { background: #1f4b99; color: white; cursor: pointer; }
-    .result { margin-top: 20px; background: #e9ecef; padding: 15px; border-radius: 8px; }
+    h1 {
+      color: #58a6ff;
+    }
+    textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1em;
+    }
+    textarea {
+      background: #161b22;
+      color: #f0f6fc;
+    }
+    button {
+      background: #238636;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2ea043;
+    }
+    .result {
+      margin-top: 20px;
+      background: #161b22;
+      padding: 15px;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
   <h1>🔒 SafeStack Analyzer</h1>
-  <p>Enter a Stacks contract address or code below to check its safety:</p>
+  <p>Enter a Stacks contract address or paste your Clarity code below:</p>
 
   <form id="analyzeForm">
-    <textarea id="contractInput" placeholder="Paste your contract address or Clarity code here..." rows="5"></textarea>
-    <button type="submit">Analyze</button>
+    <textarea id="contractInput" rows="6" placeholder="Paste address or code here..."></textarea>
+    <button type="submit">Analyze Contract</button>
   </form>
 
   <div id="result" class="result"></div>
@@ -30,14 +58,19 @@
       e.preventDefault();
       const contract = document.getElementById('contractInput').value;
       const resultDiv = document.getElementById('result');
-      resultDiv.textContent = 'Analyzing...';
+      resultDiv.innerHTML = 'Analyzing...';
 
       const res = await fetch('/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ address: contract })
       });
+
       const data = await res.json();
+      if (data.error) {
+        resultDiv.innerHTML = `<b style="color:red;">${data.error}</b>`;
+        return;
+      }
 
       resultDiv.innerHTML = `
         <h3>🧠 Analysis Result</h3>
