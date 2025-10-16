@@ -28,6 +28,26 @@ By combining **AI analysis** and **blockchain transparency**, SafeStack makes de
 | **Evidence** | $1.9B in DeFi hacks, 70% unaware of risks, 90% want AI-powered safety tools. |
 | **Feasibility** | Uses Python, AI models, and Stacks API to deliver instant safety analysis. |
 
+
+---
+---
+
+## 🚀 PHASE 2 — Prototype Build
+
+### 🔍 Overview
+The **SafeStack** prototype demonstrates an AI-assisted tool that analyzes Clarity smart contracts and Stacks addresses for potential security risks or suspicious behaviors.  
+This backend prototype is built with **Python (Flask)** and uses AI-like pattern recognition to provide a simple “risk level” assessment for contracts and transactions.
+
+---
+
+### ⚙️ Setup Instructions
+
+**1️⃣ Clone the repository**
+```bash
+git clone https://github.com/florakyerewaaainooson/SafeStack.git
+cd SafeStack
+
+
 ---
 
 ✅ **Status:** Phase 1 complete.
