@@ -6,10 +6,45 @@ from ai_explainer import explain_findings
 
 app = Flask(__name__)
 
+# ---------------------------
+# Homepage route
+# ---------------------------
 @app.route("/")
 def home():
-    return "SafeStack prototype running. POST /analyze with JSON {\"address\": \"<contract_address>\"} or {\"code\": \"<contract_code>\"}"
+    return """
+    <html>
+        <head>
+            <title>SafeStack</title>
+            <style>
+                body {
+                    font-family: 'Segoe UI', sans-serif;
+                    background: #0d1117;
+                    color: #f0f6fc;
+                    text-align: center;
+                    padding-top: 100px;
+                }
+                h1 {
+                    font-size: 2.5em;
+                    color: #58a6ff;
+                }
+                p {
+                    font-size: 1.2em;
+                    color: #8b949e;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>✅ SafeStack is Live</h1>
+            <p>Your AI-powered Bitcoin Security Analyzer is running smoothly.</p>
+            <p>Use the <b>POST /analyze</b> endpoint to test your smart contract security.</p>
+        </body>
+    </html>
+    """
 
+
+# ---------------------------
+# Analyzer route
+# ---------------------------
 @app.route("/analyze", methods=["POST"])
 def analyze():
     data = request.get_json() or {}
@@ -28,10 +63,14 @@ def analyze():
 
     return jsonify({
         "safety_score": score,
-        "risk_level": ("Dangerous" if score<40 else "Moderate" if score<70 else "Safe"),
+        "risk_level": ("Dangerous" if score < 40 else "Moderate" if score < 70 else "Safe"),
         "findings": findings,
         "explanation": explanation
     })
 
+
+# ---------------------------
+# Run Flask app
+# ---------------------------
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
